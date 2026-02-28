@@ -1046,13 +1046,22 @@
             </thead>
             <tbody>
               <tr>
-                <td class="font-semibold">Major Transient Risk Factor</td>
+                <td class="font-semibold">Major Transient Risk Factor (no persistent RF)</td>
                 <td>3 months <span class="badge badge-green">Class I</span></td>
                 <td>3 months minimum</td>
                 <td>3 months; then discontinue <span class="badge badge-green">Strong</span></td>
                 <td>3-6 months</td>
                 <td>3 months; discontinue <span class="badge badge-green">Strong</span></td>
                 <td>3 months; review and stop</td>
+              </tr>
+              <tr>
+                <td class="font-semibold">Major Transient RF + Persistent Risk Factor</td>
+                <td>Consider extended if persistent risk factors <span class="badge badge-yellow">Class IIa</span></td>
+                <td>Individualized based on persistent risk</td>
+                <td>Suggest continuing if persistent risk factor <span class="badge badge-blue">Conditional</span></td>
+                <td>Individualized assessment</td>
+                <td>Consider extended anticoagulation <span class="badge badge-blue">Conditional</span></td>
+                <td>Review at 3 months; consider extended if persistent RF</td>
               </tr>
               <tr>
                 <td class="font-semibold">Minor Transient Risk Factor</td>
@@ -1277,10 +1286,10 @@ flowchart TD
   <footer class="text-center pb-8">
     <div class="glass-panel px-6 py-5 inline-block" style="border-top: 3px solid #991b1b; max-width: 800px;">
       <p class="text-xs mb-3 leading-relaxed" style="color:#64748b;">
-        <strong style="color:#1e293b;">Reference:</strong> Zuin M, Bikdeli B, Lip GYH, Albanese J, Barco S, Konstantinides SV, Mazzolai L, Moores L, Moll S, Moia M, Rivera-Lebron BN, Rosovsky R, Agnelli G.
+        <strong style="color:#1e293b;">Reference:</strong> Zuin M, Bikdeli B, Ballard-Hernandez J, Barco S, Battinelli EM, Giannakoulas G, Jimenez D, Klok FA, Krishnathasan D, Lang IM, Moores L, Sylvester KW, Weitz JI, Piazza G.
         <em>International Clinical Practice Guideline Recommendations for Acute Pulmonary Embolism: Harmony, Dissonance, and Silence.</em>
         J Am Coll Cardiol. 2024;84(16):1561-1577.
-        <a href="https://doi.org/10.1016/j.jacc.2024.07.032" target="_blank" style="color:#1d4ed8;text-decoration:underline;text-underline-offset:2px;">doi:10.1016/j.jacc.2024.07.032</a>
+        <a href="https://doi.org/10.1016/j.jacc.2024.07.044" target="_blank" style="color:#1d4ed8;text-decoration:underline;text-underline-offset:2px;">doi:10.1016/j.jacc.2024.07.044</a>
       </p>
       <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(153,27,27,0.2),transparent);margin:0 auto 10px;max-width:400px;"></div>
       <p class="text-xs" style="color:#64748b;">
@@ -1334,6 +1343,7 @@ const abbreviations = [
   {abbr:"CHEST", full:"American College of Chest Physicians (ACCP)"},
   {abbr:"CrCl", full:"Creatinine Clearance"},
   {abbr:"CT", full:"Computed Tomography"},
+  {abbr:"CTED", full:"Chronic Thromboembolic Disease"},
   {abbr:"CTEPH", full:"Chronic Thromboembolic Pulmonary Hypertension"},
   {abbr:"CTPA", full:"Computed Tomography Pulmonary Angiography"},
   {abbr:"CUS", full:"Compression Ultrasonography"},
