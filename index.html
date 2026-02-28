@@ -353,9 +353,8 @@
       </div>
     </div>
 
-    <p class="text-sm mt-1 max-w-2xl mx-auto leading-relaxed" style="color:#64748b;">
-      International Guideline Recommendations for Acute Pulmonary Embolism:
-      <span class="text-gradient-gold font-semibold">Harmony, Dissonance &amp; Silence</span>
+    <p class="text-sm mt-1 max-w-3xl mx-auto leading-relaxed whitespace-nowrap" style="color:#64748b;">
+      International Guideline Recommendations for Acute Pulmonary Embolism: <span class="text-gradient-gold font-semibold">Harmony, Dissonance &amp; Silence</span>
     </p>
   </header>
 
@@ -1204,17 +1203,17 @@ flowchart TD
         <h2 class="font-display text-2xl font-bold mb-1 text-gradient-red">Algorithm 3: Anticoagulation Duration Decision</h2>
         <p class="text-slate-500 text-sm mb-4">Guideline-harmonized approach to duration decisions</p>
         <div class="mermaid">
-flowchart TD
-    A["PE Confirmed<br/>Start Anticoagulation"] --> B{"What Provoked<br/>the PE?"}
-    B -->|"Major Transient<br/>Risk Factor<br/>(surgery, trauma,<br/>immobilization ≥3d)"| C["3 Months<br/>Then STOP"]
-    B -->|"Minor Transient<br/>Risk Factor<br/>(OCP, travel,<br/>minor surgery)"| D["3 Months Minimum<br/>Consider Extension<br/>Based on Bleeding Risk"]
-    B -->|"Active Cancer"| E["Extended / Indefinite<br/>LMWH or DOAC<br/>Review with Oncology"]
-    B -->|"Antiphospholipid<br/>Syndrome"| F["Extended / Indefinite<br/>⚠️ VKA Preferred<br/>DOACs NOT recommended<br/>(esp. triple +ve)"]
-    B -->|"Recurrent VTE<br/>(2nd episode)"| G["Extended / Indefinite<br/>Strong Recommendation<br/>Across All Guidelines"]
-    B -->|"Unprovoked PE<br/>(No identifiable<br/>risk factor)"| H{"Assess<br/>Bleeding Risk"}
-    H -->|"Low Bleeding<br/>Risk"| I["Extended Anticoagulation<br/>Reassess Annually"]
-    I --> J["Consider Reduced Dose<br/>Apixaban 2.5mg BD or<br/>Rivaroxaban 10mg OD"]
-    H -->|"High Bleeding<br/>Risk"| K["3-6 Months<br/>Then Reassess<br/>Consider Aspirin"]
+flowchart LR
+    A["PE Confirmed"] --> B{"Provoking<br/>Factor?"}
+    B -->|"Major Transient"| C["3 Months then STOP"]
+    B -->|"Minor Transient"| D["3 Months Minimum<br/>Consider Extension"]
+    B -->|"Cancer"| E["Extended<br/>LMWH or DOAC"]
+    B -->|"APS"| F["Extended<br/>VKA Preferred"]
+    B -->|"Recurrent VTE"| G["Extended<br/>All Guidelines Agree"]
+    B -->|"Unprovoked"| H{"Bleeding<br/>Risk?"}
+    H -->|"Low"| I["Extended AC<br/>Reassess Annually"]
+    I --> J["Reduced Dose Option<br/>Apixaban 2.5mg BD<br/>Rivaroxaban 10mg OD"]
+    H -->|"High"| K["3-6 Months<br/>Consider Aspirin"]
 
     style C fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#166534
     style E fill:#fef2f2,stroke:#dc2626,stroke-width:2px,color:#991b1b
@@ -1231,12 +1230,12 @@ flowchart TD
         <p class="text-slate-500 text-sm mb-4">Advanced therapy decision pathway for high-risk PE</p>
         <div class="mermaid">
 flowchart TD
-    A["💀 MASSIVE PE<br/>Hemodynamic Instability"] --> B["Start UFH<br/>IV Bolus + Infusion"]
+    A["MASSIVE PE<br/>Hemodynamic Instability"] --> B["Start UFH<br/>IV Bolus + Infusion"]
     B --> C{"Contraindication<br/>to Thrombolysis?"}
     C -->|"No"| D["Systemic Thrombolysis<br/>Alteplase 100mg/2h<br/>or 0.6mg/kg/15min"]
     D --> E{"Response<br/>Within 36-72h?"}
-    E -->|"Yes"| F["✅ Continue Anticoagulation<br/>Transition to DOAC"]
-    E -->|"No — Failed"| G{"Surgical<br/>Expertise<br/>Available?"}
+    E -->|"Yes"| F["Continue Anticoagulation<br/>Transition to DOAC"]
+    E -->|"No - Failed"| G{"Surgical<br/>Expertise<br/>Available?"}
     G -->|"Yes"| H["Surgical Embolectomy"]
     G -->|"No"| I["Catheter-Directed<br/>Intervention (CDI)"]
     C -->|"Yes"| J{"CDI Available<br/>with Expertise?"}
